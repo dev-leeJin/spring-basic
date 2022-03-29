@@ -1,20 +1,31 @@
 package com.ict.controller.di;
 
+import com.ict.controller.di.classfile.Book;
+import com.ict.controller.di.classfile.Library;
 import com.ict.controller.di.classfile.Singer;
 import com.ict.controller.di.classfile.Stage;
 
 public class DiMainJavaver {
 
 	public static void main(String[] args) {
-		// °¡¼ö, ¹«´ë¸¦ »ı¼ºÇÑ ´ÙÀ½
-		Singer singer = new Singer(); // SingerÀÌ ¾øÀ¸¸é ½ÇÇàÀÌ ¾È‰Î. (stage°¡ singer¿¡ ÀÇÁ¸ÇÑ´Ù.) 
+		/*
+		// ê°€ìˆ˜, ë¬´ëŒ€ë¥¼ ìƒì„±í•œ ë‹¤ìŒ
+		Singer singer = new Singer(); // Singerì´ ì—†ìœ¼ë©´ ì‹¤í–‰ì´ ì•ˆëŒ. (stageê°€ singerì— ì˜ì¡´í•œë‹¤.) 
 		Stage stage = new Stage(singer);
 		
-		// ¹«´ë¿¡ °ø¿¬(perform)¸Ş¼­µå¸¦ È£ÃâÇØÁÖ¼¼¿ä.
+		// ë¬´ëŒ€ì— ê³µì—°(perform)ë©”ì„œë“œë¥¼ í˜¸ì¶œí•´ì£¼ì„¸ìš”.
 		stage.perform();
 		
-		// ±×³É °¡¼ö°¡ ³ë·¡ÇÏ´Â°Íµµ °¡´ÉÇÑÁö Å×½ºÆ®
+		// ê·¸ëƒ¥ ê°€ìˆ˜ê°€ ë…¸ë˜í•˜ëŠ”ê²ƒë„ ê°€ëŠ¥í•œì§€ í…ŒìŠ¤íŠ¸
 		singer.sing();
+		*/
+		// ê¸°ì¡´ ìë°”ì—ì„œëŠ” Book, Livraryë¥¼ ë‘˜ ë‹¤ ìƒì„±í•´ì•¼ ì‹¤í–‰ ê°€ëŠ¥
+		Book book = new Book();
+		// Library library = new Library(book);// ìƒì„±ì ì£¼ì…ì´ ê°€ëŠ¥í• ë•ŒëŠ” ìƒì„±í•˜ë©´ì„œ bookì„ Libraryì— ë„£ìœ¼ë©´ ë¨
+		Library library = new Library();
+		library.setBook(book);
+		library.browse();
+		
 
 	}
 

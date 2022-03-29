@@ -5,24 +5,24 @@ import org.springframework.stereotype.Component;
 @Component
 public class Broadcast {
 	
-	// °¡¼ö -> ¹«´ë
-	// ¹æ¼Û -> ¹«´ë¼¼ÆÃ, °¡¼ö
-	// ÀÇ ÀÇÁ¸ °ü°è¸¦ °¡Áø´Ù. singer-> stage(singer) -> broadcast(stage(singer))
-	// ¹æ¼ÛÀÌ ¹«´ë¿¡ ÀÇÁ¸ÇÏ±â ¶§¹®¿¡
-	// 1.BroadCastÅ¬·¡½º¸¦ ¸¸µé°í Stage¸¦ ÀÔ·Â¹Ş¾Æ¾ß¸¸ »ı¼º°¡´ÉÇÏ°Ô ÇØÁÖ¼¼¿ä.
+	// ê°€ìˆ˜ -> ë¬´ëŒ€
+	// ë°©ì†¡ -> ë¬´ëŒ€ì„¸íŒ…, ê°€ìˆ˜
+	// ì˜ ì˜ì¡´ ê´€ê³„ë¥¼ ê°€ì§„ë‹¤. singer-> stage(singer) -> broadcast(stage(singer))
+	// ë°©ì†¡ì´ ë¬´ëŒ€ì— ì˜ì¡´í•˜ê¸° ë•Œë¬¸ì—
+	// 1.BroadCastí´ë˜ìŠ¤ë¥¼ ë§Œë“¤ê³  Stageë¥¼ ì…ë ¥ë°›ì•„ì•¼ë§Œ ìƒì„±ê°€ëŠ¥í•˜ê²Œ í•´ì£¼ì„¸ìš”.
 	private Stage stage;
 	
 	public Broadcast(Stage stage) {
 		this.stage = stage;
 	}
-	// 2.BroadcastÀÇ ¼ÛÃâ±â´ÉÀ» ´ã´çÇÏ´Â onAir¸Ş¼­µå´Â "¹æ¼Û ¼ÛÃâÁßÀÎ ¹«´ë¿¡¼­ °¡¼ö°¡ ³ë·¡¸¦ ÇÕ´Ï´Ù."¶ó´Â ¹®ÀåÀÌ ³ª¿Àµµ·Ï ¼¼ÆÃ
+	// 2.Broadcastì˜ ì†¡ì¶œê¸°ëŠ¥ì„ ë‹´ë‹¹í•˜ëŠ” onAirë©”ì„œë“œëŠ” "ë°©ì†¡ ì†¡ì¶œì¤‘ì¸ ë¬´ëŒ€ì—ì„œ ê°€ìˆ˜ê°€ ë…¸ë˜ë¥¼ í•©ë‹ˆë‹¤."ë¼ëŠ” ë¬¸ì¥ì´ ë‚˜ì˜¤ë„ë¡ ì„¸íŒ…
 	public void onAir() {
-		System.out.print("¹æ¼Û ¼ÛÃâÁßÀÎ ");
+		System.out.print("ë°©ì†¡ ì†¡ì¶œì¤‘ì¸ ");
 		this.stage.perform();
 		
 	}
 	
-	// 3.DiMainSpringver¿¡¼­ Stage¿Í Singer¸¦ °Ç³Ê¶Ù°í ¹Ù·Î Broadcast¸¦ ¸¸µé¾î¼­ ¼¼ÆÃ ÈÄ ½ÇÇà
+	// 3.DiMainSpringverì—ì„œ Stageì™€ Singerë¥¼ ê±´ë„ˆë›°ê³  ë°”ë¡œ Broadcastë¥¼ ë§Œë“¤ì–´ì„œ ì„¸íŒ… í›„ ì‹¤í–‰
 		
 		
 	

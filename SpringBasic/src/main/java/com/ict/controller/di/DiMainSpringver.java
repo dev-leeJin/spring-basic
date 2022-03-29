@@ -4,35 +4,41 @@ import org.springframework.context.support.GenericXmlApplicationContext;
 
 import com.ict.controller.di.classfile.BalladSinger;
 import com.ict.controller.di.classfile.Broadcast;
+import com.ict.controller.di.classfile.Library;
 import com.ict.controller.di.classfile.PopSinger;
 import com.ict.controller.di.classfile.Singer;
 import com.ict.controller.di.classfile.Stage;
 
 public class DiMainSpringver {
-	// ¿ÜºÎ¿¡¼­ »ı¼ºÀ» ÇÏ°í »ç¿ëÀÚ´Â °¡Á®´Ù ¾²±â¸¸ÇÏ´Â ÆÑÅä¸® ÆĞÅÏÀ» »ç¿ë.
+	// ì™¸ë¶€ì—ì„œ ìƒì„±ì„ í•˜ê³  ì‚¬ìš©ìëŠ” ê°€ì ¸ë‹¤ ì“°ê¸°ë§Œí•˜ëŠ” íŒ©í† ë¦¬ íŒ¨í„´ì„ ì‚¬ìš©.
 	public static void main(String[] args) {
-		// root-context¶ó´Â °øÀå¿¡ ÀúÀåµÈ °´Ã¼¸¦ »Ì¾Æ¼­ ½á¾ßÇÕ´Ï´Ù.
-		// 1. °¡Á®¿À±â À§ÇÑ È£ÃâÄÚµå¸¦ ÀÛ¼ºÇØº¸°Ú½À´Ï´Ù.
+		
+		// ê³µì¥ ì£¼ì†Œ 2ê°œ ë°°ì—´ë¡œ ì²˜ë¦¬
+		String[] address = {"file:src/main/webapp/WEB-INF/spring/root-context.xml",
+				"file:src/main/webapp/WEB-INF/spring/root-context2.xml"};
+		
+		// root-contextë¼ëŠ” ê³µì¥ì— ì €ì¥ëœ ê°ì²´ë¥¼ ë½‘ì•„ì„œ ì¨ì•¼í•©ë‹ˆë‹¤.
+		// 1. ê°€ì ¸ì˜¤ê¸° ìœ„í•œ í˜¸ì¶œì½”ë“œë¥¼ ì‘ì„±í•´ë³´ê² ìŠµë‹ˆë‹¤.
 		GenericXmlApplicationContext context =
-				new GenericXmlApplicationContext("file:src/main/webapp/WEB-INF/spring/root-context.xml");
-		// 2. °øÀå ³»ºÎ °´Ã¼ °¡Á®¿À±â
-		// context.gerBeans("°øÀå ³»ºÎ ¸íÄª", Å¬·¡½ºÆÄÀÏ¸í.class);
+				new GenericXmlApplicationContext("file:src/main/webapp/WEB-INF/spring/root-*.xml");
+		// 2. ê³µì¥ ë‚´ë¶€ ê°ì²´ ê°€ì ¸ì˜¤ê¸°
+		// context.gerBeans("ê³µì¥ ë‚´ë¶€ ëª…ì¹­", í´ë˜ìŠ¤íŒŒì¼ëª….class);
 		// Singer singer = context.getBean("singer", Singer.class);
 		
-		// 3. °¡Á®¿Â °´Ã¼ »ç¿ëÇÏ±â.
+		// 3. ê°€ì ¸ì˜¨ ê°ì²´ ì‚¬ìš©í•˜ê¸°.
 		// singer.sing();
 		
-		// 4. ¿©·¯ºĞµéÀÌ Á÷Á¢ Stage¸¦ °¡Á®´Ù°¡ ½ÇÇà½ÃÅ°´Â ÄÚµå¸¦ ÀÛ¼º
-		//# singer°¡ ÀÌ¹Ì ºó ÄÁÅ×ÀÌ³Ê ³»ºÎ¿¡ ¿Ï¼ºÀÌ µÇ¾î ÀÖ±â ¶§¹®¿¡ ±»ÀÌ ³ÖÁö ¾Ê¾Æµµ µ¹¾Æ°£´Ù. 
+		// 4. ì—¬ëŸ¬ë¶„ë“¤ì´ ì§ì ‘ Stageë¥¼ ê°€ì ¸ë‹¤ê°€ ì‹¤í–‰ì‹œí‚¤ëŠ” ì½”ë“œë¥¼ ì‘ì„±
+		//# singerê°€ ì´ë¯¸ ë¹ˆ ì»¨í…Œì´ë„ˆ ë‚´ë¶€ì— ì™„ì„±ì´ ë˜ì–´ ìˆê¸° ë•Œë¬¸ì— êµ³ì´ ë„£ì§€ ì•Šì•„ë„ ëŒì•„ê°„ë‹¤. 
 		//Stage stage = context.getBean("stage", Stage.class);
 		//stage.perform();
 		
 		
-		// Broadcast¸¦ ´Ù¸¥ ´Ü°è¸¦ °ÅÄ¡Áö ¾Ê°í Á÷Á¢ »ı¼ºÇØ ±â´É È£Ãâ
+		// Broadcastë¥¼ ë‹¤ë¥¸ ë‹¨ê³„ë¥¼ ê±°ì¹˜ì§€ ì•Šê³  ì§ì ‘ ìƒì„±í•´ ê¸°ëŠ¥ í˜¸ì¶œ
 		//Broadcast broadcast = context.getBean("broadcast", Broadcast.class);
 		//broadcast.onAir();
 		
-		// 6. BalladSinger¸¦ Á÷Á¢ ¸¸µé¾î ½áº¸°Ú½À´Ï´Ù.
+		// 6. BalladSingerë¥¼ ì§ì ‘ ë§Œë“¤ì–´ ì¨ë³´ê² ìŠµë‹ˆë‹¤.
 		//BalladSinger balladSinger = context.getBean("balladSinger", BalladSinger.class);
 		//balladsinger.sing();
 		
@@ -40,13 +46,17 @@ public class DiMainSpringver {
 		//PopSinger popSinger = context.getBean("popSinger", PopSinger.class);
 		//popsinger.sing();
 		
-		// 7. ¼öµ¿»ı¼º beanÀÎ stage1 °¡Á®¿Í¼­ »ç¿ëÇÏ±â
-		Stage stage1 = context.getBean("stage1", Stage.class);
-		stage1.perform();
+		// 7. ìˆ˜ë™ìƒì„± beanì¸ stage1 ê°€ì ¸ì™€ì„œ ì‚¬ìš©í•˜ê¸°
+		//Stage stage1 = context.getBean("stage1", Stage.class);
+		//stage1.perform();
 		
-		Stage stage2 = context.getBean("stage2", Stage.class);
-		stage2.perform();
+		//Stage stage2 = context.getBean("stage2", Stage.class);
+		//stage2.perform();
 		
+		
+		// 8. library ê°€ì ¸ì™€ ì‹¤í–‰í•˜ê¸°.
+		Library library = context.getBean("library1", Library.class);
+		library.browse();
 	}
 
 }

@@ -3,13 +3,13 @@ package com.ict.controller.di.classfile;
 import org.springframework.stereotype.Component;
 
 //@Component 
-// Singer¸¦ »ó¼ÛÇÑ ¹ß¶óµå°¡¼ö¿Í ÆË °¡¼ö¸¦ »ý¼ºÇØ¼­ ºó ÄÁÅ×ÀÌ³Ê¿¡ µî·ÏÇÏ±â¶§¹®¿¡ SingerÀÚÃ¼´Â ÇÊ¿ä°¡ ¾ø¾îÁ³´Ù.
+// Singerë¥¼ ìƒì†¡í•œ ë°œë¼ë“œê°€ìˆ˜ì™€ íŒ ê°€ìˆ˜ë¥¼ ìƒì„±í•´ì„œ ë¹ˆ ì»¨í…Œì´ë„ˆì— ë“±ë¡í•˜ê¸°ë•Œë¬¸ì— Singerìžì²´ëŠ” í•„ìš”ê°€ ì—†ì–´ì¡Œë‹¤.
 public class Singer {
 	
-	// °¡¼ö´Â ¹«´ë°¡ ÀÖ°Ç ¾ø°Ç ³ë·¡¸¦ ÇÒ ¼ö ÀÖ±â ¶§¹®¿¡
-	// ´Ù¸¥ ¾î¶² ¿ä¼Ò ¾øÀÌ ¿ÀÁ÷ ³ë·¡±â´É¸¸ ³Ö¾îµÓ´Ï´Ù. 
+	// ê°€ìˆ˜ëŠ” ë¬´ëŒ€ê°€ ìžˆê±´ ì—†ê±´ ë…¸ëž˜ë¥¼ í•  ìˆ˜ ìžˆê¸° ë•Œë¬¸ì—
+	// ë‹¤ë¥¸ ì–´ë–¤ ìš”ì†Œ ì—†ì´ ì˜¤ì§ ë…¸ëž˜ê¸°ëŠ¥ë§Œ ë„£ì–´ë‘¡ë‹ˆë‹¤. 
 	
 	public void sing() {
-		System.out.println("°¡¼ö°¡ ³ë·¡¸¦ ÇÕ´Ï´Ù.");
+		System.out.println("ê°€ìˆ˜ê°€ ë…¸ëž˜ë¥¼ í•©ë‹ˆë‹¤.");
 	}
 }
