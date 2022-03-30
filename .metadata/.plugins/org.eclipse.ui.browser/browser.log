@@ -21,3 +21,32 @@
 3월 29, 2022 14:40:26.263 [129104:129584:0329/144026.263:ERROR:device_event_log_impl.cc(214)] [14:40:26.263] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
 3월 29, 2022 14:40:26.265 [129104:129584:0329/144026.265:ERROR:device_event_log_impl.cc(214)] [14:40:26.266] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
 3월 29, 2022 14:40:26.266 [129104:129584:0329/144026.266:ERROR:device_event_log_impl.cc(214)] [14:40:26.267] Bluetooth: bluetooth_adapter_winrt.cc:1075 Getting Default Adapter failed.
+
+3월 30, 2022 12:13:17.319 NEW SESSION
+3월 30, 2022 12:13:17.319 [99872:140760:0330/121317.306:ERROR:device_event_log_impl.cc(214)] [12:13:17.307] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+3월 30, 2022 12:13:17.319 [99872:140760:0330/121317.309:ERROR:device_event_log_impl.cc(214)] [12:13:17.310] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+3월 30, 2022 12:13:17.320 [99872:140760:0330/121317.314:ERROR:device_event_log_impl.cc(214)] [12:13:17.314] Bluetooth: bluetooth_adapter_winrt.cc:1075 Getting Default Adapter failed.
+3월 30, 2022 12:16:53.866 [139224:137792:0330/121653.866:ERROR:device_event_log_impl.cc(214)] [12:16:53.866] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+3월 30, 2022 12:16:53.869 [139224:137792:0330/121653.869:ERROR:device_event_log_impl.cc(214)] [12:16:53.869] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+3월 30, 2022 12:16:53.873 [139224:137792:0330/121653.873:ERROR:device_event_log_impl.cc(214)] [12:16:53.873] Bluetooth: bluetooth_adapter_winrt.cc:1075 Getting Default Adapter failed.
+3월 30, 2022 12:40:55.628 [140172:137508:0330/124055.628:ERROR:device_event_log_impl.cc(214)] [12:40:55.627] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+3월 30, 2022 12:40:55.631 [140172:137508:0330/124055.630:ERROR:device_event_log_impl.cc(214)] [12:40:55.630] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+3월 30, 2022 12:40:55.636 [140172:137508:0330/124055.635:ERROR:device_event_log_impl.cc(214)] [12:40:55.635] Bluetooth: bluetooth_adapter_winrt.cc:1075 Getting Default Adapter failed.
+3월 30, 2022 12:41:20.552 [142080:142084:0330/124120.551:ERROR:device_event_log_impl.cc(214)] [12:41:20.552] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+3월 30, 2022 12:41:20.555 [142080:142084:0330/124120.555:ERROR:device_event_log_impl.cc(214)] [12:41:20.555] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+3월 30, 2022 12:41:20.561 [142080:142084:0330/124120.560:ERROR:device_event_log_impl.cc(214)] [12:41:20.561] Bluetooth: bluetooth_adapter_winrt.cc:1075 Getting Default Adapter failed.
+3월 30, 2022 12:43:20.106 [138164:88044:0330/124320.106:ERROR:device_event_log_impl.cc(214)] [12:43:20.106] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+3월 30, 2022 12:43:20.109 [138164:88044:0330/124320.108:ERROR:device_event_log_impl.cc(214)] [12:43:20.109] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+3월 30, 2022 12:43:20.114 [138164:88044:0330/124320.114:ERROR:device_event_log_impl.cc(214)] [12:43:20.114] Bluetooth: bluetooth_adapter_winrt.cc:1075 Getting Default Adapter failed.
+3월 30, 2022 14:05:14.545 [144864:148516:0330/140514.545:ERROR:device_event_log_impl.cc(214)] [14:05:14.545] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+3월 30, 2022 14:05:14.549 [144864:148516:0330/140514.548:ERROR:device_event_log_impl.cc(214)] [14:05:14.548] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+3월 30, 2022 14:05:14.554 [144864:148516:0330/140514.553:ERROR:device_event_log_impl.cc(214)] [14:05:14.553] Bluetooth: bluetooth_adapter_winrt.cc:1075 Getting Default Adapter failed.
+3월 30, 2022 14:14:41.701 [149412:146372:0330/141441.701:ERROR:device_event_log_impl.cc(214)] [14:14:41.701] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+3월 30, 2022 14:14:41.704 [149412:146372:0330/141441.704:ERROR:device_event_log_impl.cc(214)] [14:14:41.704] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+3월 30, 2022 14:14:41.708 [149412:146372:0330/141441.708:ERROR:device_event_log_impl.cc(214)] [14:14:41.708] Bluetooth: bluetooth_adapter_winrt.cc:1075 Getting Default Adapter failed.
+3월 30, 2022 14:15:39.524 [149868:150360:0330/141539.524:ERROR:device_event_log_impl.cc(214)] [14:15:39.524] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+3월 30, 2022 14:15:39.527 [149868:150360:0330/141539.527:ERROR:device_event_log_impl.cc(214)] [14:15:39.527] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+3월 30, 2022 14:15:39.530 [149868:150360:0330/141539.530:ERROR:device_event_log_impl.cc(214)] [14:15:39.530] Bluetooth: bluetooth_adapter_winrt.cc:1075 Getting Default Adapter failed.
+3월 30, 2022 14:17:22.123 [146920:151180:0330/141722.123:ERROR:device_event_log_impl.cc(214)] [14:17:22.123] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+3월 30, 2022 14:17:22.127 [146920:151180:0330/141722.126:ERROR:device_event_log_impl.cc(214)] [14:17:22.126] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+3월 30, 2022 14:17:22.133 [146920:151180:0330/141722.132:ERROR:device_event_log_impl.cc(214)] [14:17:22.132] Bluetooth: bluetooth_adapter_winrt.cc:1075 Getting Default Adapter failed.
