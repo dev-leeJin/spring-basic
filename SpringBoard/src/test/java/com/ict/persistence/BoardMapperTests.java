@@ -48,12 +48,39 @@ public class BoardMapperTests {
 	}
 	
 	// select 메서드에 대한 테스트 코드 작성
-	@Test
+	//@Test
 	public void getSelect() {
 		// 가져오기(글번호는 두 번째로 큰 번호로 해주세요.)
 		//BoardVO vo = 
 		boardMapper.select(5);
 		// 로그 찍기
 		//log.info(vo);
+	}
+	
+	// delete 메서드에 대한 테스트 코드 작성 후
+	// 삭제여부 sqldevloper나 상단의 getAllList()로 확인해보세요.
+	//@Test
+	public void delete() {
+		boardMapper.delete(5);
+	}
+	
+	// update 메서드에 대한 테스트 코드를 작성해주신 다음
+	// 수정여부를 getAllList()로 확인해보세요.
+	@Test
+	public void testUpdate() {
+		BoardVO board = new BoardVO();
+		log.info("전달 데이터 아직 입력 안된 vo : " + board);
+		// setter로 전달할 title, content, bno를 채워주세요.
+		board.setTitle("바꿀제목");
+		board.setContent("바꿀본문");
+		board.setBno(1);
+		log.info("전달 데이터가 입력된 vo : " + board);
+		// 실행
+		boardMapper.update(board);
+	}
+	
+	@Test
+	public void testUpdate2() {
+		boardMapper.update2("up2로 바꾼제목", "up2로 바꾼본문", 2);
 	}
 }

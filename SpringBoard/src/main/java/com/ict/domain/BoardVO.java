@@ -11,7 +11,7 @@ public class BoardVO {
 
 	
 	// board_tbl 구조에 맞게 멤버변수를 선언해주세요.
-	private Long bno;
+	private long bno;
 	private String title;
 	private String content;
 	private String writer;
