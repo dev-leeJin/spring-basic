@@ -10,6 +10,7 @@
 	<h1>${board.bno }번글 수정페이지입니다.</h1>
 	${board }
 	<form action="/boardUpdate" method="post">
+		<input type="hidden" name="bno" value="${board.bno }"/>
 		제목 : <input type="text" name="title" value="${board.title }"><br/>
 		글쓴이 : <input type="text" name="writer" value="${board.writer }"><br/>
 		본문 : <textarea name="content" rows="20" cols="100">${board.content }</textarea><br/>
