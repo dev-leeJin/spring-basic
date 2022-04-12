@@ -5,13 +5,16 @@ import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
 import com.ict.domain.BoardVO;
+import com.ict.domain.Criteria;
 
 public interface BoardMapper {
 	
 	// board_tbl에서 글번호 3번 이하만 조회하는 쿼리문을
 	// 어노테이션을 이용해 작성해주세요
 	// @Select("SELECT * FROM board_tbl WHERE bno < 4")
-	public List<BoardVO> getList(long pageNum);
+	
+	//버튼 추가를 위해 pageNum대신 Criteria를 활용합니다.
+	public List<BoardVO> getList(Criteria cri);
 	
 	public void insert(BoardVO vo);
 	
@@ -33,4 +36,10 @@ public interface BoardMapper {
 	public void update2(@Param("title") String title,
 						@Param("content")String content,
 						@Param("bno") long bno);
+	
+	
+	// 전체 글 개수를 얻어오는 countPageNum를 선언합니다.
+	// 파라미터는 필요없습니다.
+	// 글 개수 => 정수 값을 조회하기 때문이 int 리턴입니다.
+	public int countPageNum();
 }

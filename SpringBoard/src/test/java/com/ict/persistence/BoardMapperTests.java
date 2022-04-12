@@ -9,6 +9,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.ict.domain.BoardVO;
+import com.ict.domain.Criteria;
 import com.ict.mapper.BoardMapper;
 
 import lombok.extern.log4j.Log4j;
@@ -26,7 +27,7 @@ public class BoardMapperTests {
 	// 테스트 코드가 실행될 수 있도록 작성해주세요.
 	//@Test
 	public void testGetList() {
-		List<BoardVO> result= boardMapper.getList(1);
+		List<BoardVO> result= boardMapper.getList();
 		log.info("저장된 게시물 정보 : " + result);
 	}
 	

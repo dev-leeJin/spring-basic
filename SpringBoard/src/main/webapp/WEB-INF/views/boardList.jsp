@@ -33,7 +33,38 @@
 			</c:forEach>
 		</tbody>
 	</table>
-	<a href="/boardInsert" class="btn btn-success">글쓰기</a>
+	<a href="/boardInsert" class="btn btn-success">글쓰기</a> <br/>
+	${pageMaker } <br/>
+	
+		<!-- 버튼 코드 -->	
+			<nav aria-label="Page navigation example">
+		  <ul class="pagination justify-content-center">
+		    <li class="page-item">
+		    
+		    <c:if test="${pageMaker.prev }">
+		      <a class="page-link" href="/boardList?pageNum=${pageMaker.startPage -1 }" aria-label="Previous">
+		        <span aria-hidden="true">&laquo;</span>
+		      </a>
+		    </c:if>
+		    
+		    </li>
+		    
+		    <c:forEach begin="${pageMaker.startPage }" end="${pageMaker.endPage }" var="idx">
+		    <li class="page-item ${pageMaker.cri.pageNum eq idx ? 'active' : '' }">
+		    	<a class="page-link" href="/boardList?pageNum=${idx}">${idx}</a></li>
+		    </c:forEach>
+		    
+		    <li class="page-item">
+		    
+		    <c:if test="${pageMaker.next && pageMaker.endPage > 0 }">
+		      <a class="page-link" href="/boardList?pageNum=${pageMaker.endPage +1 }" aria-label="Next">
+		        <span aria-hidden="true">&raquo;</span>
+		    </c:if>
+		      </a>
+		    </li>
+		  </ul>
+		</nav>
+
 	</div>
 </body>
 </html>
