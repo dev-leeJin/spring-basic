@@ -25,7 +25,7 @@
 			<c:forEach var="board" items="${boardList }">
 				<tr>
 					<th>${board.bno }</th>
-					<th><a href="/boardDetail/${board.bno}">${board.title }</th>
+					<th><a href="/boardDetail/${board.bno}?searchType=${pageMaker.cri.searchType }&keyword=${pageMaker.cri.keyword}">${board.title }</th>
 					<th>${board.writer }</th>
 					<th>${board.regdate }</th>
 					<th>${board.updatedate }</th>
@@ -42,7 +42,7 @@
 		    <li class="page-item">
 		    
 		    <c:if test="${pageMaker.prev }">
-		      <a class="page-link" href="/boardList?pageNum=${pageMaker.startPage -1 }" aria-label="Previous">
+		      <a class="page-link" href="/boardList?pageNum=${pageMaker.startPage -1 }&searchType=${pageMaker.cri.searchType }&keyword=${pageMaker.cri.keyword}" aria-label="Previous">
 		        <span aria-hidden="true">&laquo;</span>
 		      </a>
 		    </c:if>
@@ -51,20 +51,37 @@
 		    
 		    <c:forEach begin="${pageMaker.startPage }" end="${pageMaker.endPage }" var="idx">
 		    <li class="page-item ${pageMaker.cri.pageNum eq idx ? 'active' : '' }">
-		    	<a class="page-link" href="/boardList?pageNum=${idx}">${idx}</a></li>
+		    	<a class="page-link" href="/boardList?pageNum=${idx}&searchType=${pageMaker.cri.searchType }&keyword=${pageMaker.cri.keyword}">${idx}</a></li>
 		    </c:forEach>
 		    
 		    <li class="page-item">
 		    
 		    <c:if test="${pageMaker.next && pageMaker.endPage > 0 }">
-		      <a class="page-link" href="/boardList?pageNum=${pageMaker.endPage +1 }" aria-label="Next">
+		      <a class="page-link" href="/boardList?pageNum=${pageMaker.endPage +1 }&searchType=${pageMaker.cri.searchType }&keyword=${pageMaker.cri.keyword}" aria-label="Next">
 		        <span aria-hidden="true">&raquo;</span>
 		    </c:if>
 		      </a>
 		    </li>
 		  </ul>
 		</nav>
-
+		<div class="row">
+			<!-- 검색창 부분 -->
+			<form action="/boardList" method="get">
+				<!-- select태그를 이용해 클릭해 검색조건을 선택할수있도록 처리합니다. -->
+				<select name="searchType">
+				<!-- 검색조건을 option태그를 이용해 만듭니다. -->
+					<option value="n">-</option>
+					<option value="t" ${pageMaker.cri.searchType eq 't' ? 'selected' : '' }>제목</option>
+					<option value="c" ${pageMaker.cri.searchType eq 'c' ? 'selected' : '' }>본문</option>
+					<option value="w" ${pageMaker.cri.searchType eq 'w' ? 'selected' : '' }>글쓴이</option>
+					<option value="tc" ${pageMaker.cri.searchType eq 'tc' ? 'selected' : '' }>제목+본문</option>
+					<option value="cw" ${pageMaker.cri.searchType eq 'cw' ? 'selected' : '' }>본문+글쓴이</option>
+					<option value="tcw" ${pageMaker.cri.searchType eq 'tcw' ? 'selected' : '' }>제목+본문+글쓴이</option>
+				</select>
+				<input type="text" name="keyword" placeholder="검색어" value="${pageMaker.cri.keyword }">
+				<input type="submit" value="검색하기">
+			</form>
+		</div>
 	</div>
 </body>
 </html>
