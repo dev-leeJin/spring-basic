@@ -20,7 +20,7 @@
 		<div class="col-md-3">수정날짜 :</div>
 		<div class="col-md-3">${board.updatedate } :</div>
 	</div>
-	<a href="/boardList" class="btn btn-success">글목록</a>
+	<a href="/boardList?pageNum=${param.pageNum }&searchType=${param.searchType}&keyword=${param.keyword}" class="btn btn-success">글목록</a>
 	<form action="/boardDelete" method="post">
 		<input type="hidden" value="${board.bno }" name="bno"/>
 		<input type="submit" value="삭제" class="btn btn-danger">

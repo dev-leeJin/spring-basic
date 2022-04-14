@@ -1,31 +1,31 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
 	<div class="container">
-	<h1>°Ô½Ã¹° ¸ñ·Ï</h1>
+	<h1>ê²Œì‹œë¬¼ ëª©ë¡</h1>
 	<table border="1">
 		<thead>
 			<tr>
-				<th>±Û¹øÈ£</th>
-				<th>±ÛÁ¦¸ñ</th>
-				<th>±Û¾´ÀÌ</th>
-				<th>¾´³¯Â¥</th>
-				<th>¼öÁ¤³¯Â¥</th>
+				<th>ê¸€ë²ˆí˜¸</th>
+				<th>ê¸€ì œëª©</th>
+				<th>ê¸€ì“´ì´</th>
+				<th>ì“´ë‚ ì§œ</th>
+				<th>ìˆ˜ì •ë‚ ì§œ</th>
 			</tr>
 		</thead>
 		<tbody>
 			<c:forEach var="board" items="${boardList }">
 				<tr>
 					<th>${board.bno }</th>
-					<th><a href="/boardDetail/${board.bno}?searchType=${pageMaker.cri.searchType }&keyword=${pageMaker.cri.keyword}">${board.title }</th>
+					<th><a href="/boardDetail/${board.bno}?pageNum=${pageMaker.cri.pageNum}&searchType=${pageMaker.cri.searchType }&keyword=${pageMaker.cri.keyword}">${board.title }</th>
 					<th>${board.writer }</th>
 					<th>${board.regdate }</th>
 					<th>${board.updatedate }</th>
@@ -33,10 +33,10 @@
 			</c:forEach>
 		</tbody>
 	</table>
-	<a href="/boardInsert" class="btn btn-success">±Û¾²±â</a> <br/>
+	<a href="/boardInsert" class="btn btn-success">ê¸€ì“°ê¸°</a> <br/>
 	${pageMaker } <br/>
 	
-		<!-- ¹öÆ° ÄÚµå -->	
+		<!-- ë²„íŠ¼ ì½”ë“œ -->	
 			<nav aria-label="Page navigation example">
 		  <ul class="pagination justify-content-center">
 		    <li class="page-item">
@@ -65,21 +65,21 @@
 		  </ul>
 		</nav>
 		<div class="row">
-			<!-- °Ë»öÃ¢ ºÎºĞ -->
+			<!-- ê²€ìƒ‰ì°½ ë¶€ë¶„ -->
 			<form action="/boardList" method="get">
-				<!-- selectÅÂ±×¸¦ ÀÌ¿ëÇØ Å¬¸¯ÇØ °Ë»öÁ¶°ÇÀ» ¼±ÅÃÇÒ¼öÀÖµµ·Ï Ã³¸®ÇÕ´Ï´Ù. -->
+				<!-- selectíƒœê·¸ë¥¼ ì´ìš©í•´ í´ë¦­í•´ ê²€ìƒ‰ì¡°ê±´ì„ ì„ íƒí• ìˆ˜ìˆë„ë¡ ì²˜ë¦¬í•©ë‹ˆë‹¤. -->
 				<select name="searchType">
-				<!-- °Ë»öÁ¶°ÇÀ» optionÅÂ±×¸¦ ÀÌ¿ëÇØ ¸¸µì´Ï´Ù. -->
+				<!-- ê²€ìƒ‰ì¡°ê±´ì„ optioníƒœê·¸ë¥¼ ì´ìš©í•´ ë§Œë“­ë‹ˆë‹¤. -->
 					<option value="n">-</option>
-					<option value="t" ${pageMaker.cri.searchType eq 't' ? 'selected' : '' }>Á¦¸ñ</option>
-					<option value="c" ${pageMaker.cri.searchType eq 'c' ? 'selected' : '' }>º»¹®</option>
-					<option value="w" ${pageMaker.cri.searchType eq 'w' ? 'selected' : '' }>±Û¾´ÀÌ</option>
-					<option value="tc" ${pageMaker.cri.searchType eq 'tc' ? 'selected' : '' }>Á¦¸ñ+º»¹®</option>
-					<option value="cw" ${pageMaker.cri.searchType eq 'cw' ? 'selected' : '' }>º»¹®+±Û¾´ÀÌ</option>
-					<option value="tcw" ${pageMaker.cri.searchType eq 'tcw' ? 'selected' : '' }>Á¦¸ñ+º»¹®+±Û¾´ÀÌ</option>
+					<option value="t" ${pageMaker.cri.searchType eq 't' ? 'selected' : '' }>ì œëª©</option>
+					<option value="c" ${pageMaker.cri.searchType eq 'c' ? 'selected' : '' }>ë³¸ë¬¸</option>
+					<option value="w" ${pageMaker.cri.searchType eq 'w' ? 'selected' : '' }>ê¸€ì“´ì´</option>
+					<option value="tc" ${pageMaker.cri.searchType eq 'tc' ? 'selected' : '' }>ì œëª©+ë³¸ë¬¸</option>
+					<option value="cw" ${pageMaker.cri.searchType eq 'cw' ? 'selected' : '' }>ë³¸ë¬¸+ê¸€ì“´ì´</option>
+					<option value="tcw" ${pageMaker.cri.searchType eq 'tcw' ? 'selected' : '' }>ì œëª©+ë³¸ë¬¸+ê¸€ì“´ì´</option>
 				</select>
-				<input type="text" name="keyword" placeholder="°Ë»ö¾î" value="${pageMaker.cri.keyword }">
-				<input type="submit" value="°Ë»öÇÏ±â">
+				<input type="text" name="keyword" placeholder="ê²€ìƒ‰ì–´" value="${pageMaker.cri.keyword }">
+				<input type="submit" value="ê²€ìƒ‰í•˜ê¸°">
 			</form>
 		</div>
 	</div>

@@ -10,6 +10,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.ict.domain.BoardVO;
 import com.ict.domain.Criteria;
+import com.ict.domain.SearchCriteria;
 import com.ict.mapper.BoardMapper;
 
 import lombok.extern.log4j.Log4j;
@@ -27,8 +28,8 @@ public class BoardMapperTests {
 	// 테스트 코드가 실행될 수 있도록 작성해주세요.
 	//@Test
 	public void testGetList() {
-		List<BoardVO> result= boardMapper.getList();
-		log.info("저장된 게시물 정보 : " + result);
+		//List<BoardVO> result= boardMapper.getList();
+		//log.info("저장된 게시물 정보 : " + result);
 	}
 	
 	
@@ -67,7 +68,7 @@ public class BoardMapperTests {
 	
 	// update 메서드에 대한 테스트 코드를 작성해주신 다음
 	// 수정여부를 getAllList()로 확인해보세요.
-	@Test
+	//@Test
 	public void testUpdate() {
 		BoardVO board = new BoardVO();
 		log.info("전달 데이터 아직 입력 안된 vo : " + board);
@@ -80,8 +81,19 @@ public class BoardMapperTests {
 		boardMapper.update(board);
 	}
 	
-	@Test
+	//@Test
 	public void testUpdate2() {
 		boardMapper.update2("up2로 바꾼제목", "up2로 바꾼본문", 2);
+	}
+	
+	// 구문 생성이 어떻게되는지 관측하기 위한 테스트코드
+	// 검색어 검색조건 실행 제대로 되는지 여부 테스트
+	@Test
+	public void testSearchGetList() {
+		SearchCriteria cri = new SearchCriteria();
+		cri.setKeyword("asd");
+		cri.setSearchType("t");
+		
+		boardMapper.getList(cri);
 	}
 }

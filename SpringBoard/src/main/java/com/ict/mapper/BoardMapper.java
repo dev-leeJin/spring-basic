@@ -6,6 +6,7 @@ import org.apache.ibatis.annotations.Param;
 
 import com.ict.domain.BoardVO;
 import com.ict.domain.Criteria;
+import com.ict.domain.SearchCriteria;
 
 public interface BoardMapper {
 	
@@ -14,7 +15,7 @@ public interface BoardMapper {
 	// @Select("SELECT * FROM board_tbl WHERE bno < 4")
 	
 	//버튼 추가를 위해 pageNum대신 Criteria를 활용합니다.
-	public List<BoardVO> getList(Criteria cri);
+	public List<BoardVO> getList(SearchCriteria cri);
 	
 	public void insert(BoardVO vo);
 	
@@ -41,5 +42,5 @@ public interface BoardMapper {
 	// 전체 글 개수를 얻어오는 countPageNum를 선언합니다.
 	// 파라미터는 필요없습니다.
 	// 글 개수 => 정수 값을 조회하기 때문이 int 리턴입니다.
-	public int countPageNum();
+	public int countPageNum(SearchCriteria cri);
 }
