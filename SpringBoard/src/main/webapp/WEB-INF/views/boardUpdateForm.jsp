@@ -14,6 +14,13 @@
 		제목 : <input type="text" name="title" value="${board.title }"><br/>
 		글쓴이 : <input type="text" name="writer" value="${board.writer }"><br/>
 		본문 : <textarea name="content" rows="20" cols="100">${board.content }</textarea><br/>
+		<!-- 수정을 했다면, 수정완료후에도 페이지번호, 검색조건, 검색어가 유지되도록
+		전달받은 데이터를 폼으로 다시 넘겨줘야 합니다.
+		넘겨받은 searchType,keyword,pageNum을 재전달하도록 폼 내부에 추가  -->
+		<input type="hidden" name="searchType" value="${param.searchType}" />
+		<input type="hidden" name="keyword" value="${param.keyword}" />
+		<input type="hidden" name="pagdNum" value="${param.pageNum }" />
+		
 		<input type="submit" value="글쓰기"> <input type="reset" value="초기화">
 	</form>
 </body>
