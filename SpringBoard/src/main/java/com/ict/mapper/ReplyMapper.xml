@@ -21,7 +21,7 @@
 	<update id="update">
 		UPDATE reply_tbl
 			SET
-		reply = #{reply}, updatdDate = SYSDATE
+		reply = #{reply}, updateDate = SYSDATE
 			WHERE rno = #{rno}
 	</update>
 	

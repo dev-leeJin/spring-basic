@@ -59,7 +59,7 @@ public class BoardController {
 		pageMaker.setTotalBoard(countPage); //calcData()호출도 되면서 순식간에 prev, next, startPage, endPage세팅
 		model.addAttribute("pageMaker", pageMaker);
 		
-		return "boardList";
+		return "board/boardList";
 	}
 	
 	// 글 하나만 조회할 수 있는 디테일 페이지인 boardDetail.jsp로 연결되는
@@ -71,7 +71,7 @@ public class BoardController {
 	public String boardDetail(@PathVariable long bno, Model moder) {
 		BoardVO board = service.select(bno);
 		moder.addAttribute("board",board);
-		return "boardDetail";
+		return "board/boardDetail";
 	}
 	
 	
@@ -80,7 +80,7 @@ public class BoardController {
 	// 폼 페이지의 이름은 boardForm.jsp입니다
 	@GetMapping("/boardInsert")
 	public String boardForm() {
-		return "boardForm";
+		return "board/boardForm";
 	}
 	
 	
@@ -95,7 +95,7 @@ public class BoardController {
 		log.info("들어온 데이터 디버깅 : " + board);
 		// insert 로직 실행
 		service.insert(board);
-		return "redirect:/boardList";
+		return "redirect:/board/boardList";
 	}
 	
 	// 글삭제 로직은 Post방식으로만 진행합니다.
@@ -123,7 +123,7 @@ public class BoardController {
 		//삭제로직 실행
 		service.delete(bno);
 		//리턴으로 리스트페이지 복귀
-		return "redirect:boardList";
+		return "redirect:/board/boardList";
 	}
 	
 	// /boardUpdateForm를 Post방식으로 접속하는 form 연결 메서드를 만들겠습니다.
@@ -136,7 +136,7 @@ public class BoardController {
 		BoardVO board = service.select(bno);
 		// 바인딩
 		model.addAttribute("board",board);
-		return "boardUpdateForm"; //${board};
+		return "board/boardUpdateForm"; //${board};
 	}
 	
 	// /boardUpdate를 post방식으로 접속하는 메서드를 만들겠습니다.
@@ -163,7 +163,7 @@ public class BoardController {
 		// update 호출
 		service.update(board);
 		// redirect:주소&글번=getter
-		return "redirect:/boardDetail/" + board.getBno();
+		return "redirect:/board/boardDetail/" + board.getBno();
 	}
 	 
 }
