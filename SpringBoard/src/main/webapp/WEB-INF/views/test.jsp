@@ -24,15 +24,14 @@
 	<!-- 비동기 요청 부분 -->
 	<script type="text/javascript">
 		let bno = 327700;
+	function getAllList(){	
 		// $.getJSON은 입력한 주소에 get방식으로 요청을 넣는다. 
-		
 					//주소에 접속				//콜백함수() //주소 요청으로 얻어온 json을 어떻게 처리할지	
 		$.getJSON("/replies/all/" + bno, function(data){
 			// 문자열을 이용해 태그를 생성하거나 끼워넣을 수 있으므로
 			// 빈 문자열을 만들어놓고 거기에 댓글정보를 저장해 화면에 전송
 			let str = "";
 			console.log(data); // 요청을 넣은 주소의 데이터를 얻어와 function을 이용해 어떻게 처리할지 정하기.(console에 찍기)(디버깅)
-			
 			
 			// 들고 온 데이터를 반복해서 출력하기
 			//$(JSON형식데이터).each => 내부 JSON을 향상된 for문 형식으로 처리합니다. 
@@ -49,8 +48,10 @@
 			console.log(str);
 			
 			$("#replies").html(str); //아이디replies의 html(str)을 화면에 표출 (문자도 표출가능)
-			
-		});  
+			});
+	}
+	// 함수 호출 구문을 적어야 진짜 실행됨, 함수 선언부는 작성한다고 해서 바로 실행되지 않음.
+	getAllList();
 			
 			// 비동기식이고 사용자가 버튼을 눌러 요청했을 때 데이터가 나오게 세팅
 			// 버튼(testBtn)클릭시 발동되는 이벤트 (#testBtn을 click하면 function 57~64을 실행 )
