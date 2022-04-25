@@ -243,7 +243,7 @@
           <tags>persp.newWizSC:org.eclipse.m2e.core.wizards.Maven2ProjectWizard</tags>
           <tags>persp.showIn:org.eclipse.tm.terminal.view.ui.TerminalsView</tags>
           <children xsi:type="basic:PartSashContainer" xmi:id="_bxfrk7FjEeyTNccVq1g6dA" selectedElement="_bxfrnLFjEeyTNccVq1g6dA" horizontal="true">
-            <children xsi:type="basic:PartSashContainer" xmi:id="_bxfrlLFjEeyTNccVq1g6dA" containerData="1406" selectedElement="_bxfrlbFjEeyTNccVq1g6dA">
+            <children xsi:type="basic:PartSashContainer" xmi:id="_bxfrlLFjEeyTNccVq1g6dA" containerData="1406" selectedElement="_bxfrmrFjEeyTNccVq1g6dA">
               <children xsi:type="basic:PartStack" xmi:id="_bxfrlbFjEeyTNccVq1g6dA" elementId="left" containerData="8000" selectedElement="_bxfrlrFjEeyTNccVq1g6dA">
                 <children xsi:type="advanced:Placeholder" xmi:id="_bxfrlrFjEeyTNccVq1g6dA" elementId="org.eclipse.jdt.ui.PackageExplorer" ref="_bxfuG7FjEeyTNccVq1g6dA" closeable="true">
                   <tags>View</tags>
@@ -398,7 +398,7 @@
       <children xsi:type="basic:PartStack" xmi:id="_6XT50cCvEeyZfogrAzD0OQ" elementId="PartStack@7f3c26ca" selectedElement="_-Bax0MPVEeyC9rxrj6hItA">
         <tags>active</tags>
         <children xsi:type="basic:Part" xmi:id="_IJYEoMOnEeyC9rxrj6hItA" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="test.jsp" iconURI="platform:/plugin/org.eclipse.jst.jsp.ui/icons/full/obj16/sourceEditor.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jst.jsp.core.jspsource.source&quot; name=&quot;test.jsp&quot; partName=&quot;test.jsp&quot; title=&quot;test.jsp&quot; tooltip=&quot;SpringBoard/src/main/webapp/WEB-INF/views/test.jsp&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/SpringBoard/src/main/webapp/WEB-INF/views/test.jsp&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;1667&quot; selectionTopPixel=&quot;611&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jst.jsp.core.jspsource.source&quot; name=&quot;test.jsp&quot; partName=&quot;test.jsp&quot; title=&quot;test.jsp&quot; tooltip=&quot;SpringBoard/src/main/webapp/WEB-INF/views/test.jsp&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/SpringBoard/src/main/webapp/WEB-INF/views/test.jsp&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;13&quot; selectionOffset=&quot;1654&quot; selectionTopPixel=&quot;397&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>removeOnHide</tags>
           <tags>org.eclipse.jst.jsp.core.jspsource.source</tags>
@@ -410,13 +410,13 @@
           <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
         </children>
         <children xsi:type="basic:Part" xmi:id="_hKyToMOnEeyC9rxrj6hItA" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="onClickTest.jsp" iconURI="platform:/plugin/org.eclipse.jst.jsp.ui/icons/full/obj16/sourceEditor.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jst.jsp.core.jspsource.source&quot; name=&quot;onClickTest.jsp&quot; partName=&quot;onClickTest.jsp&quot; title=&quot;onClickTest.jsp&quot; tooltip=&quot;SpringBoard/src/main/webapp/WEB-INF/views/onClickTest.jsp&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/SpringBoard/src/main/webapp/WEB-INF/views/onClickTest.jsp&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;88&quot; selectionOffset=&quot;308&quot; selectionTopPixel=&quot;155&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jst.jsp.core.jspsource.source&quot; name=&quot;onClickTest.jsp&quot; partName=&quot;onClickTest.jsp&quot; title=&quot;onClickTest.jsp&quot; tooltip=&quot;SpringBoard/src/main/webapp/WEB-INF/views/onClickTest.jsp&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/SpringBoard/src/main/webapp/WEB-INF/views/onClickTest.jsp&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;88&quot; selectionOffset=&quot;308&quot; selectionTopPixel=&quot;171&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>removeOnHide</tags>
           <tags>org.eclipse.jst.jsp.core.jspsource.source</tags>
         </children>
         <children xsi:type="basic:Part" xmi:id="_-Bax0MPVEeyC9rxrj6hItA" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="insertTest.jsp" iconURI="platform:/plugin/org.eclipse.jst.jsp.ui/icons/full/obj16/sourceEditor.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jst.jsp.core.jspsource.source&quot; name=&quot;insertTest.jsp&quot; partName=&quot;insertTest.jsp&quot; title=&quot;insertTest.jsp&quot; tooltip=&quot;SpringBoard/src/main/webapp/WEB-INF/views/insertTest.jsp&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/SpringBoard/src/main/webapp/WEB-INF/views/insertTest.jsp&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;724&quot; selectionTopPixel=&quot;459&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jst.jsp.core.jspsource.source&quot; name=&quot;insertTest.jsp&quot; partName=&quot;insertTest.jsp&quot; title=&quot;insertTest.jsp&quot; tooltip=&quot;SpringBoard/src/main/webapp/WEB-INF/views/insertTest.jsp&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/SpringBoard/src/main/webapp/WEB-INF/views/insertTest.jsp&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;3108&quot; selectionTopPixel=&quot;1618&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>removeOnHide</tags>
           <tags>org.eclipse.jst.jsp.core.jspsource.source</tags>
@@ -649,7 +649,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_bxgTCrFjEeyTNccVq1g6dA" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_VStEoMOiEeyC9rxrj6hItA" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_bxjX7bFjEeyTNccVq1g6dA"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_2T6k4MQoEey_7vcd-D_zNg" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_bxjX7bFjEeyTNccVq1g6dA"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_bxgTF7FjEeyTNccVq1g6dA" elementId="group.edit" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -689,7 +689,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_bxgTcLFjEeyTNccVq1g6dA" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_VSvg4MOiEeyC9rxrj6hItA" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" enabled="false" type="Check" command="_bxjXlLFjEeyTNccVq1g6dA"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_2T-PQMQoEey_7vcd-D_zNg" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" enabled="false" type="Check" command="_bxjXlLFjEeyTNccVq1g6dA"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_bxgTfrFjEeyTNccVq1g6dA" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
