@@ -3,12 +3,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<!--정중앙에 넣는 css코드-->
 <style>
 	#modDiv {
 		width : 300px;
 		height : 100px;
 		background-color : green;
-		position : absolute; 
+		position : absolute;  
 		top : 50%;
 		left : 50%;
 		margin-top : -50px;
@@ -80,7 +81,7 @@
 			$.getJSON("/replies/all/" + bno, function(data){
 				let str = "";
 				console.log(data);
-				$(data).each(function() { 
+				$(data).each(function() { // "''"표기가 어려우면 리엑트를 배우면 됌
 						str += "<li data-rno='" + this.rno + "' class='replyLi'>"
 							+ this.rno + ":" + this.reply
 							+ "<button>수정/삭제</button></li>";
