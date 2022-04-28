@@ -5,7 +5,7 @@
 <head>
 <style>
 	#modDiv {
-		width : 300px;
+		width : 500px;
 		height : 100px;
 		background-color : skyblue;
 		border : blue solid 2px;
@@ -16,6 +16,9 @@
 		margin-left : -150px;
 		padding : 10px;
 		z-index: 1000;
+	}
+	#reply{
+		width : 450px;
 	}
 </style>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -79,15 +82,21 @@
 	
 	
 	<!-- 댓글 작성 공간 -->
-	<div>
-		<div>
-			댓글 글쓴이 <input type= "text" name ="replyer" id="newReplyWriter">
-		</div>
-		<div>
-			댓글 내용 <input type="text" name="reply" id="newReplyText">
-		</div>
-		<button id="replyAddBtn">댓글 추가</button>
+	<div class="row box-box-success">
+		<div class="box-header">
+			<h2 class="text-primary">댓글 작성</h2>
+		</div><!-- header -->
+		<div class="box-body">
+			<strong>Writer</strong>
+			<input type="text" id="newReplyWriter" placeholder="Replyer" class="form-control">
+			<strong>ReplyText</strong>
+			<input type="text" id="newReplyText" placeholder="ReplyText" class="form-control">
+		</div> <!-- body -->
+		<div class="box=footer">
+			<button type="button" class="btn btn-success" id="replyAddBtn">Add Reply</button>
+		</div> <!-- footer -->
 	</div>
+	
 	</div>	<!--container -->
 	
 	<!-- 모달 -->
@@ -95,7 +104,7 @@
 	<div class="modal-title">
 	</div>
 	<div>
-		<input type="text" id="reply">
+		<input type="text" id="reply" >
 	</div>
 	<div>
 		<button type="button" id="replyModBtn">Modify</button> <!-- 수정 -->
@@ -179,12 +188,16 @@
 	// 이벤트 위임 (버튼 하나하나를 개별적으로 적용) (모달 창 열기)
 	$("#replies").on("click", ".replyLi button", function(){
 		
-		var replytag = $(this).parent();
+		var replytag = $(this).parent(); // -> 얘를 쓰던 변수를 변경할거임. 
+		
 		// 4.27수정 : this(button)의 부모(.replyLi)가 아닌
 		// 형제 태그 .reply의 내용을 대신 가져올수 있도록
 		// 변수 replyContent를 선언해 거기에 저장해주세요.
-		// (hint : .sibling("요소명"); 으로 형제태그를 가져올수 있습니다. )
-		//var replyContent = $(this).sibling();
+		// (hint : .siblings("요소명"); 으로 형제태그를 가져올수 있습니다. )
+		//(방법은 많음.)
+		//var replyContent = $(this).prev().text(); // button의 직전 태그인 .reply의 내용을 가져오기
+		//var replyContent = $(this).parent().children(".reply").text();
+		var replyContent = $(this).siblings(".reply").text(); // button의 형제 중 .reply의 내용을 가져오기
 		
 		console.log(replytag);
 
@@ -194,7 +207,8 @@
 		var reply = replytag.text();
 
 		$(".modal-title").html(rno); 
-		$("#reply").val(reply); 
+		$("#reply").val(replyContent); // 본문 내용만 받아오기로 수정.
+		//$("#reply").val(reply); 
 		$("#modDiv").show("slow"); 
 	});
 	
