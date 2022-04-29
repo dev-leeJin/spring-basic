@@ -16,9 +16,15 @@ public class SampleServiceTests {
 	@Autowired // 서비스에 맞는 타입 자동 주입
 	private SampleService service;
 	
-	@Test // 테스트로 실행
+	//@Test // 테스트로 실행
 	public void testClass() {
 		log.info(service);
 		log.info(service.getClass().getName());
+	}
+	
+	@Test
+	public void testAdd() throws Exception{
+		
+		log.info(service.doAdd("123", "456"));
 	}
 }
