@@ -43,4 +43,8 @@ public interface BoardMapper {
 	// 파라미터는 필요없습니다.
 	// 글 개수 => 정수 값을 조회하기 때문이 int 리턴입니다.
 	public int countPageNum(SearchCriteria cri);
+	
+	
+	// 댓글이 늘어날떄마다 replycount증가 
+	public void updateReplyCount(@Param("bno") Long bno, @Param("amount") int amount);
 }

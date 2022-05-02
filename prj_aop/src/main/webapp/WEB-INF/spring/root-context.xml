@@ -21,7 +21,7 @@
 	
 	
 	<!-- db연결 -->
-	
+	<context:property-placeholder location="classpath:db.properties"/>
 	<!-- Root Context: defines shared resources visible to all other web components -->
 	<bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
 		<property name="driverClassName"
@@ -51,5 +51,5 @@
 	<!-- 어노테이션을 거는것만으로 트랜잭션 작동하도록 도와줌 -->
 	<tx:annotation-driven/>
 	
-	<mybatis-spring:scan base-package="org.ict.mapper"/>
+	<mybatis-spring:scan base-package="com.ict.mapper"/>
 </beans>
