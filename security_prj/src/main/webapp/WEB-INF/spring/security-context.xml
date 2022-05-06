@@ -8,6 +8,7 @@
 	    http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<bean id="customAccessDenied" class="com.ict.security.CustomAccessDeniedHandler"></bean>
+	<bean id="customLoginSuccess" class="com.ict.security.CustomLoginSuccessHandler"></bean>
 	
 	<security:http>
 	
@@ -20,7 +21,8 @@
 		<!-- /secu/admin은 admin에게만 접근 허용 --> <!-- admin은 member의 상위 버전이 아니라 하나의 계정이 뿐이라 밑에 권한을 하나 더 부여해야 한다.  -->
 		<security:intercept-url pattern="/secu/admin" access="hasRole('ROLE_ADMIN')" />
 		
-		<security:form-login/>
+		<security:form-login login-page="/customLogin"
+			authentication-success-handler-ref="customLoginSuccess"/>
 		
 		<!-- <security:access-denied-handler error-page="/accessError"/> -->	
 		<security:access-denied-handler ref="customAccessDenied"/>
