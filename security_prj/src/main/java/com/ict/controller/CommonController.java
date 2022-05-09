@@ -4,6 +4,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import lombok.extern.log4j.Log4j;
 
@@ -31,5 +32,17 @@ public class CommonController {
 		if(logout != null) {
 			model.addAttribute("logout", "로그아웃 했습니다.");
 		}
+	}
+	
+	// get방식으로 들어갔을 때는 삭제하는 페이지로 들어가는 것.
+	@GetMapping("/customLogout")
+	public void logoutGet() {
+		log.info("로그아웃 폼으로 이동");
+	}
+	
+	// post방식으로 들어갔을 때 세션 파기가 되도록 자동으로 설정이 되어있음. (security-context_)
+	@PostMapping("/customLogout")
+	public void logoutPost() {
+		log.info("포스트방식으로 로그아웃요청 처리");
 	}
 }

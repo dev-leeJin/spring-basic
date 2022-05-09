@@ -8,5 +8,6 @@
 </head>
 <body>
 	<h1>admin 주소</h1>
+	<a href="/customLogout">로그아웃페이지 이동</a> <!-- get방식 (로그아웃로직이 작동은 안함) -->
 </body>
 </html>
