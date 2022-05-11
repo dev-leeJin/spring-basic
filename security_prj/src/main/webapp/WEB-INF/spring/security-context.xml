@@ -18,10 +18,10 @@
 		<security:intercept-url pattern="/secu/all" access="permitAll"/>
 		
 		<!-- /secu/member는 Member에게만 접근 허용 -->
-		<security:intercept-url pattern="/secu/member" access="hasRole('ROLE_MEMBER')" />
+	<!-- 	<security:intercept-url pattern="/secu/member" access="hasRole('ROLE_MEMBER')" />  -->
 		
 		<!-- /secu/admin은 admin에게만 접근 허용 --> <!-- admin은 member의 상위 버전이 아니라 하나의 계정이 뿐이라 밑에 권한을 하나 더 부여해야 한다.  -->
-		<security:intercept-url pattern="/secu/admin" access="hasRole('ROLE_ADMIN')" />
+	<!-- 	<security:intercept-url pattern="/secu/admin" access="hasRole('ROLE_ADMIN')" />  --> <!-- 어노테이션으로 처리하기 위해 주석처리 -->
 		
 		<security:form-login login-page="/customLogin"
 			authentication-success-handler-ref="customLoginSuccess"/>
@@ -29,7 +29,10 @@
 		<!-- <security:access-denied-handler error-page="/accessError"/> -->	
 		<security:access-denied-handler ref="customAccessDenied"/>
 		
-		<security:logout logout-url="/customLogout" invalidate-session="true"/>
+		<security:logout logout-url="/customLogout" invalidate-session="true"
+			delete-cookies="remeber-me,JSESSIONID"/> <!-- 로그아웃시 remeber-me 쿠키 파기 -->
+		
+		<security:remember-me data-source-ref="dataSource" token-validity-seconds="604800"/> <!-- 604800초만큼(7일) 자동로그인이 유지 -->
 	
 	</security:http>
 	

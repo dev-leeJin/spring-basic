@@ -20,6 +20,8 @@
 	<p>사용자 권한목록 : <sec:authentication property="principal.member.authList"/></p>
 	
 	<hr>
+	<a href="/secu/member">회원 페이지</a> <br/>
+		
 	<a href="/customLogout">로그아웃페이지 이동</a> <!-- get방식 (로그아웃로직이 작동은 안함) -->
 </body>
 </html>
