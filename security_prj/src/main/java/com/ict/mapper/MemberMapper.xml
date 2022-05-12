@@ -32,5 +32,22 @@
 				WHERE 
 			m.userid = #{userId}
 	</select>
+	
+	<insert id= "insertMemberTbl">   <!-- 회원정보 기입 -->
+		INSERT INTO MEMBER_TBL(userid, userpw, username)
+			VALUES
+		(#{userId}, #{userPw}, #{userName})
+	</insert>
+	
+	<update id = "insertMemberAuth">  <!-- 권한목록 기입 --> <!-- 다중 insert구문은 update태그로 처리 -->
+		INSERT ALL
+		<foreach collection="authList" item="item" separator=" "> <!-- INTO를 반복시키기 위한 태그 -->
+			INTO MEMBER_AUTH(userid, auth)
+				VALUES
+			(#{item.userId}, #{item.auth})
+		</foreach>
+		SELECT *
+			FROM DUAL
+	</update>
 
 </mapper>

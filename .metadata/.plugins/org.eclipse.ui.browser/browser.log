@@ -122,3 +122,17 @@
 5월 11, 2022 09:48:09.327 [165780:131000:0511/094809.310:ERROR:device_event_log_impl.cc(214)] [09:48:09.310] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
 5월 11, 2022 09:48:09.327 [165780:131000:0511/094809.316:ERROR:device_event_log_impl.cc(214)] [09:48:09.316] Bluetooth: bluetooth_adapter_winrt.cc:1075 Getting Default Adapter failed.
 5월 11, 2022 09:49:07.58 [165780:150724:0511/094907.057:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+
+5월 12, 2022 09:20:16.44 NEW SESSION
+5월 12, 2022 09:20:16.44 [245792:181088:0512/092016.017:ERROR:device_event_log_impl.cc(214)] [09:20:16.017] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+5월 12, 2022 09:20:16.56 [245792:181088:0512/092016.019:ERROR:device_event_log_impl.cc(214)] [09:20:16.020] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+5월 12, 2022 09:20:16.56 [245792:181088:0512/092016.038:ERROR:device_event_log_impl.cc(214)] [09:20:16.039] Bluetooth: bluetooth_adapter_winrt.cc:1075 Getting Default Adapter failed.
+5월 12, 2022 09:21:13.800 [245792:168288:0512/092113.799:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+5월 12, 2022 10:36:10.976 [151004:150620:0512/103610.975:ERROR:device_event_log_impl.cc(214)] [10:36:10.976] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+5월 12, 2022 10:36:10.979 [151004:150620:0512/103610.978:ERROR:device_event_log_impl.cc(214)] [10:36:10.979] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+5월 12, 2022 10:36:10.983 [151004:150620:0512/103610.983:ERROR:device_event_log_impl.cc(214)] [10:36:10.983] Bluetooth: bluetooth_adapter_winrt.cc:1075 Getting Default Adapter failed.
+5월 12, 2022 10:37:08.652 [151004:247288:0512/103708.651:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+5월 12, 2022 12:37:28.491 [272252:254160:0512/123728.491:ERROR:device_event_log_impl.cc(214)] [12:37:28.491] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+5월 12, 2022 12:37:28.650 [272252:254160:0512/123728.493:ERROR:device_event_log_impl.cc(214)] [12:37:28.494] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+5월 12, 2022 12:37:28.651 [272252:254160:0512/123728.495:ERROR:device_event_log_impl.cc(214)] [12:37:28.496] Bluetooth: bluetooth_adapter_winrt.cc:1075 Getting Default Adapter failed.
+5월 12, 2022 12:38:26.199 [272252:254084:0512/123826.199:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater

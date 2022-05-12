@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 위의ㅣ 스키마 작성 후, 어떤 인터페이스의 메서드를 쿼리문과
+연결해 줄지 아래와 같이 인터페이스 파일부터 mapper태그로 연결합니다. -->
+<mapper namespace="com.ict.mapper.MemberMapper">
+	<resultMap type="com.ict.domain.MemberVO" id="memberMap">
+		<id property="userId" column="userid" />
+		<result property="userId" column="userid"/>
+		<result property="userPw" column="userpw"/>
+		<result property="userName" column="username"/>
+		<result property="regDate" column="regdate"/>
+		<result property="updateDate" column="updatedate"/>
+		<collection property="authList" resultMap="authMap">
+		</collection>
+	</resultMap>
+	
+	<resultMap type="com.ict.domain.AuthVO" id="authMap">
+		<result property="userId" column="userid"/>
+		<result property="auth" column="auth"/>
+	</resultMap>
+	
+	<select id="read" resultMap="memberMap">
+		SELECT
+			m.userid, userpw, username, enabled, regdate, updatedate, a.auth
+				FROM
+			member_tbl m LEFT OUTER JOIN member_auth a on m.userid = a.userid
+				WHERE 
+			m.userid = #{userId}
+	</select>
+	
+	<insert id= "insertMemberTbl">   <!-- 회원정보 기입 -->
+		INSERT INTO MEMBER_TBL(userid, userpw, username)
+			VALUES
+		(#{userId}, #{userPw}, #{userName})
+	</insert>
+	
+	<update id = "insertMemberAuth">  <!-- 권한목록 기입 --> <!-- 다중 insert구문은 update태그로 처리 -->
+		INSERT ALL
+		<foreach collection="authList" item="item" separator=" "> <!-- INTO를 반복시키기 위한 태그 -->
+			INTO MEMBER_AUTH(userid, auth)
+				VALUES
+			(#{item.userId}, #{item.auth})
+		</foreach>
+		SELECT *
+			FROM DUAL
+	</update>
+
+</mapper>
