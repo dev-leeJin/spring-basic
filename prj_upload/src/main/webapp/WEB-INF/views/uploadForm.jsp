@@ -12,5 +12,5 @@
 		<input type="file" name="uploadFile" multiple> <!-- multiple이 걸려있기 때문에 2개이상 업로드 가능 -->
 		<button>Submit</button>	<!-- 버튼만 만들어도 서브밋으로 간주 -->
 	</form>
-</body>
+</body> 
 </html>
