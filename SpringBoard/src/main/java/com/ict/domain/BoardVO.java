@@ -1,6 +1,7 @@
 package com.ict.domain;
 
 import java.sql.Date;
+import java.util.List;
 
 import lombok.Data;
 
@@ -19,6 +20,8 @@ public class BoardVO {
 	private Date updatedate;
 	
 	private int replyCount;
+	
+	private List<BoardAttachVO> attchList; // boardVO에서 이미지 정보를 받아오기 위해 선언
 	
 	
 }

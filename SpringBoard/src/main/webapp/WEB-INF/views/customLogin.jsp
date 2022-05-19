@@ -13,8 +13,8 @@
 	<h2><c:out value="${logout}"/></h2>
 	
 	<form action="/login" method="post">
-		아이디 : <input type="text" name="username"> <br/>
-		비밀번호 : <input type="password" name="password"> <br/>
+		아이디 : <input type="text" name="username" value="dlckdgns"> <br/>
+		비밀번호 : <input type="password" name="password" value="dlckdgns"> <br/>
 		자동로그인 : <input type="checkbox" name="remember-me"> <br/> 
 		<input type="submit" value="로그인하기">
 		<input type="hidden" name="${_csrf.parameterName }" value="${_csrf.token }" />
