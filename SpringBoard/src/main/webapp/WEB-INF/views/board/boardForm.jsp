@@ -34,7 +34,8 @@
 		제목 : <input type="text" name="title"><br/>
 		글쓴이 : <input type="text" name="writer"><br/>
 		본문 : <textarea name="content" rows="20" cols="100"></textarea><br/>
-		<input type="submit" value="글쓰기"> <input type="reset" value="초기화">
+		<input type="hidden" name="${_csrf.parameterName }" value="${_csrf.token }" />
+		<input id="submitBth" type="submit" value="글쓰기"> <input type="reset" value="초기화">
 	</form>
 	
 	<h3>첨부파일 영역</h3>
@@ -184,7 +185,7 @@
 				}); //ajax
 			}); // click span
 			
-			//제출버튼 누를 경우, 첨부파일 정보를 폼에 추가해서 전달하는 코드
+			//글쓰기버튼을 누를 경우, 첨부파일 정보를 폼에 추가해서 전달하는 코드
 			$("#submitBth").on("click", function(e){
 				// 1. 제출버튼을 눌렀을 때 바로 작동하지 않도록 기능막기
 				e.preventDefault();
@@ -192,10 +193,23 @@
 				// 2. var formObj = $("form"); 로 폼태그를 가져옵니다.
 				var formObj = $("form");
 				
+				var str ="";
+				
 				// 3. 5.19 = 첨부파일 내에 들어있던 이미지 정보를 콘솔에 찍기만하고 종료
-				$(".uploadResult ul li").each(function(i, obj){
-					console.log($(obj));
+				$(".uploadResult ul li").each(function(i, obj){					
+					var jobj = $(obj);
+					
+					str += "<input type='hidden' name='attachList[" + i + "].fileName'"
+						+ " value='" + jobj.data("filename") + "'>"
+						+ "<input type='hidden' name='attachList[" + i + "].uuid'"
+						+ " value='" + jobj.data("uuid") + "'>"
+						+ "<input type='hidden' name='attachList[" + i + "].uploadPath'"
+						+ " value='" + jobj.data("path") + "'>"
+						+ "<input type='hidden' name='attachList[" + i + "].fileType'"
+						+ " value='" + jobj.data("type") + "'>";
 				});
+				// 폼태그에 위의 str내부 태그를 추가해주는 명령어, .submit()을 추가로 넣으면 제출 완료
+				formObj.append(str).submit();
 			});
 			
 		}); //document

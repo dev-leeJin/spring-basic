@@ -6,9 +6,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.ict.domain.BoardAttachVO;
 import com.ict.domain.BoardVO;
 import com.ict.domain.Criteria;
 import com.ict.domain.SearchCriteria;
+import com.ict.mapper.BoardAttachMapper;
 import com.ict.mapper.BoardMapper;
 import com.ict.mapper.ReplyMapper;
 
@@ -27,6 +29,9 @@ public class BoardServiceImpl implements BoardService {
 	@Autowired
 	private ReplyMapper replyMapper;
 	
+	@Autowired
+	private BoardAttachMapper attachMapper;
+	
 	//리턴자료형이 없는 insert, delete, update구문은 사용자 행동 기준으로 메서드를 나눕니다.
 	//리턴자료형이 있는 select 구문은 하나의 메서드가 하나의 메서드가 하나의 쿼리문을 담당합니다. 
 	@Override
@@ -44,9 +49,19 @@ public class BoardServiceImpl implements BoardService {
 		return boardMapper.select(bno);
 	}
 	
+	@Transactional
 	@Override
-	public void insert(BoardVO vo) {
+	public void insert(BoardVO vo) { // 첨부파일 업로드를 위해 insert에 추가
 		boardMapper.insert(vo);
+		
+		if(vo.getAttachList() == null || vo.getAttachList().size() <= 0) {
+			return;
+		}
+		
+		vo.getAttachList().forEach(attach -> {
+			attach.setBno(vo.getBno());
+			attachMapper.insert(attach);
+		});
 		
 	}
 	@Transactional
@@ -66,4 +81,10 @@ public class BoardServiceImpl implements BoardService {
 		
 		
 	}
+	
+	@Override
+	public List<BoardAttachVO> getAttachList(Long bno){
+		return attachMapper.findByBno(bno);
+	}
+	
 }

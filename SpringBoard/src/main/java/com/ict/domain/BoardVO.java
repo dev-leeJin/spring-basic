@@ -21,7 +21,7 @@ public class BoardVO {
 	
 	private int replyCount;
 	
-	private List<BoardAttachVO> attchList; // boardVO에서 이미지 정보를 받아오기 위해 선언
+	private List<BoardAttachVO> attachList; // boardVO에서 이미지 정보를 받아오기 위해 선언
 	
 	
 }

@@ -7,6 +7,9 @@ import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,8 +17,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import com.ict.domain.BoardAttachVO;
 import com.ict.domain.BoardVO;
 import com.ict.domain.Criteria;
 import com.ict.domain.PageMaker;
@@ -93,6 +98,13 @@ public class BoardController {
 	public String boardInsert(BoardVO board) {
 		// 폼에서 날린 데이터 들어오는지 디버깅
 		log.info("들어온 데이터 디버깅 : " + board);
+		
+		// 첨부파일 들어오는지 여부 디버깅 (05.20추가)
+		log.info("=============");
+		if(board.getAttachList() != null) { // 향상된 for문 형식으로 null이 아니라면 attach라는 변수에 하나하나 넣어줌. 
+			board.getAttachList().forEach(attach -> log.info(attach));
+		}
+				
 		// insert 로직 실행
 		service.insert(board);
 		return "redirect:/board/boardList";
@@ -164,6 +176,13 @@ public class BoardController {
 		service.update(board);
 		// redirect:주소&글번=getter
 		return "redirect:/board/boardDetail/" + board.getBno();
+	}
+	
+	// 첨부파일을 rest통신으로 출력하기 위해 생성 (ajax)
+	@GetMapping(value="/getAttachList", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+	@ResponseBody
+	public ResponseEntity<List<BoardAttachVO>> getAttachList(Long bno){
+		return new ResponseEntity<>(service.getAttachList(bno), HttpStatus.OK);
 	}
 	 
 }

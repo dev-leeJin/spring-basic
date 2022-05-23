@@ -2,6 +2,7 @@ package com.ict.service;
 
 import java.util.List;
 
+import com.ict.domain.BoardAttachVO;
 import com.ict.domain.BoardVO;
 import com.ict.domain.Criteria;
 import com.ict.domain.SearchCriteria;
@@ -28,4 +29,8 @@ public interface BoardService {
 	
 	// Mapper에서 수정로직 선언부 가져오기. 
 	public void update(BoardVO vo);
+	
+	// 게시물에 연동된 첨부파일 목록 가져오기
+	// 이미지를 글에 표출시키기 위해 생성. 
+	public List<BoardAttachVO> getAttachList(Long bno);
 }
